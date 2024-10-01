@@ -1,0 +1,16 @@
+sampleName	fileName	condition
+Embryo1	sortedEMB2R_Aligned.sortedByCoord.out.counts.txt	Emb
+Embryo2	sortedEMB3R_Aligned.sortedByCoord.out.counts.txt	Emb
+Embryo3	sortedEMB5R_Aligned.sortedByCoord.out.counts.txt	Emb
+Larva1	sortedLAR1R_Aligned.sortedByCoord.out.counts.txt	Lar
+Larva2	sortedLAR2R_Aligned.sortedByCoord.out.counts.txt	Lar
+Larva3	sortedLAR3R_Aligned.sortedByCoord.out.counts.txt	Lar
+Prepupae1	sortedPRE1R_Aligned.sortedByCoord.out.counts.txt	Pre
+Prepupae2	sortedPRE2R_Aligned.sortedByCoord.out.counts.txt	Pre
+Prepupae3	sortedPRE3R_Aligned.sortedByCoord.out.counts.txt	Pre
+Pupae1	sortedPUP1R_Aligned.sortedByCoord.out.counts.txt	Pup
+Pupae2	sortedPUP2R_Aligned.sortedByCoord.out.counts.txt	Pup
+Pupae3	sortedPUP3R_Aligned.sortedByCoord.out.counts.txt	Pup
+Adult1	sortedADU1R_Aligned.sortedByCoord.out.counts.txt	Adu
+Adult2	sortedADU2R_Aligned.sortedByCoord.out.counts.txt	Adu
+Adult3	sortedADU3R_Aligned.sortedByCoord.out.counts.txt	Adu
