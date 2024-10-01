@@ -82,18 +82,23 @@ PvA$stage <- "pupa_vs_adult"
 results <- rbind(EvL,LvP,PvP,PvA)
 
 ################################################################################
-library(glm2)
+library(emmeans)
 
 hist(results$log2lfc) #is normal
 model <- glm2(log2lfc~DMS*stage, family = gaussian, data=results,
               model = TRUE, method = "glm.fit2")
 
 library(car)
-#Report the interaction stats from Anova. You are doing a GLM with a quasipoisson distribution
+#Report the interaction stats from Anova.
 Anova(model)
-#summary (model2)
 
-model$deviance/model$df.residual #Overdispersion > 1.2 bad
+model$deviance/model$df.residual 
 
 #pseudo R2
 100*((model$null.deviance-model$deviance)/model$null.deviance) #pseudo R2
+
+#The slopes (estimates) and significant stats could be reported here
+emtrends(model, pairwise~stage, var = "DMS")
+emmip(model, stage ~ DMS, cov.reduce = range)
+
+
