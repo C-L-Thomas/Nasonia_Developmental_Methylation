@@ -116,5 +116,4 @@ model$deviance/model$df.residual #Overdispersion > 1.2 bad
 #pseudo R2
 100*((model$null.deviance-model$deviance)/model$null.deviance) #pseudo R2
 
-emtrends(model, log2lfc~disttss*stage*TF, var = "TF")
-emmip(model, TF ~ log2lfc, cov.reduce = range)
+emtrends(model, pairwise~DStage, var = "Percentage")
