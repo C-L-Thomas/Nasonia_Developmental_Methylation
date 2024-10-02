@@ -85,14 +85,14 @@ results <- rbind(EvL,LvP,PvP,PvA)
 library(emmeans)
 
 hist(results$log2lfc) #is normal
-model <- glm2(log2lfc~DMS*stage, family = gaussian, data=results,
+model <- glm(log2lfc~DMS*stage, family = gaussian, data=results,
               model = TRUE, method = "glm.fit2")
 
 library(car)
 #Report the interaction stats from Anova.
 Anova(model)
 
-model$deviance/model$df.residual 
+model$deviance/model$df.residual #Overdispersion > 1.2 bad
 
 #pseudo R2
 100*((model$null.deviance-model$deviance)/model$null.deviance) #pseudo R2
@@ -100,5 +100,3 @@ model$deviance/model$df.residual
 #The slopes (estimates) and significant stats could be reported here
 emtrends(model, pairwise~stage, var = "DMS")
 emmip(model, stage ~ DMS, cov.reduce = range)
-
-
