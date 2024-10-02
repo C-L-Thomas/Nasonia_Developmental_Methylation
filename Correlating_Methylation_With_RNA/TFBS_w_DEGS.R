@@ -100,10 +100,8 @@ results <- rbind(EvL_TFBS_data,LvP_TFBS_data,PvP_TFBS_data,PvA_TFBS_data)
 table(results$TF)
 
 ################################################################################
-library(glm2)
-
 hist(results$log2lfc) #is normal
-model <- glm2(log2lfc~disttss*stage*TF, family = gaussian, data=results,
+model <- glm(log2lfc~disttss*stage*TF, family = gaussian, data=results,
                model = TRUE, method = "glm.fit2")
 
 library(car)
