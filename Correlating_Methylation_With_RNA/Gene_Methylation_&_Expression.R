@@ -52,7 +52,7 @@ ggplot(meth_exp, aes(x=Percentage, y=logCounts, colour = DStage))+
 library(emmeans)
 
 hist(results$logCounts) #is normal
-model <- glm(Counts~Percentage*DStage, family=poisson,data=results, method = "glm.fit")
+model <- glm(Counts~Percentage*DStage, family=quasipoisson,data=results, method = "glm.fit")
 
 library(car)
 #Report the interaction stats from Anova. 
