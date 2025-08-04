@@ -162,7 +162,7 @@ EvL <- getData(diff_Embryo_vs_Larva)
 colnames(EvL) <- c("chr","start","end","strand","pvalue","qvalue","meth_diff")
 head(EvL)
 
-genome_annotation <- read.delim("/data/monoallelic/clt48/Nvit_psr_1.1/genes_with_start_and_end.txt", header = FALSE)
+genome_annotation <- read.delim("genes_with_start_and_end.txt", header = FALSE)
 colnames(genome_annotation) <- c("chr","start","end","geneID")
 head(genome_annotation)
 
